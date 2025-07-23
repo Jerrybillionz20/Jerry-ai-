@@ -69,3 +69,13 @@ ElevatedButton(
     },
     child: Text("📚 Assignment Helper"),
   ),
+import 'chat_screen.dart';
+ElevatedButton(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ChatScreen()),
+    );
+  },
+  child: Text("💬 Jerry AI Chat"),
+),
