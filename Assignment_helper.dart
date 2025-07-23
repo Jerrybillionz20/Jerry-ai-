@@ -1,21 +1,11 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'dart:async';
 
 class AssignmentHelper {
-  final String apiKey;
+  Future<String> solveAssignment(String question) async {
+    // Placeholder: This will later call the AI model
+    await Future.delayed(Duration(seconds: 2));
 
-  AssignmentHelper(this.apiKey);
-
-  Future<String> solveHomework(String question) async {
-    final url = Uri.parse('https://api.openai.com/v1/chat/completions');
-
-    final response = await http.post(
-      url,
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer $apiKey',
-      },
-      body: jsonEncode({
-        "model": "gpt-3.5-turbo",
-        "messages": [
-          {"role": "system", "content": "
+    // For now, we simulate a response
+    return "Answer to: \"$question\"\n\nThis is a placeholder answer from Jerry AI.";
+  }
+}
