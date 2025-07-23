@@ -60,3 +60,12 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+ElevatedButton(
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => AssignmentScreen()),
+      );
+    },
+    child: Text("📚 Assignment Helper"),
+  ),
